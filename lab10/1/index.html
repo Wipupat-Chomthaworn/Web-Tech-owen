@@ -48,32 +48,21 @@
         var longitude = document.getElementById("lnginput");
 
         function findDestination() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    var pos = {
-                        "location": des.value
-                    };
-                    console.log(pos);
-                    document.getElementById('map').src = 'https://maps.google.com/maps?q=' + pos.location + '&t=&z=15&ie=UTF8&iwloc=&output=embed';
-                });
-            } else {
-                console.error('location not supported');
-            }
-        }
+            var pos = {
+                "location": des.value
+            };
+            console.log(pos);
+            document.getElementById('map').src = 'https://maps.google.com/maps?q=' + pos.location + '&t=&z=15&ie=UTF8&iwloc=&output=embed';
+        };
+
         function findLocation() {
-            if (navigator.geolocation) {
-                navigator.geolocation.getCurrentPosition(function (position) {
-                    var pos = {
-                        'lat': latitude.value,
-                        'long': longitude.value
-                    };
-                    console.log(pos);
-                    document.getElementById('map').src = 'https://maps.google.com/maps?q=' + pos.lat + ', ' + pos.long + '&t=&z=15&ie=UTF8&iwloc=&output=embed';
-                });
-            } else {
-                console.error('location not supported');
-            }
-        }
+            var pos = {
+                'lat': latitude.value,
+                'long': longitude.value
+            };
+            console.log(pos);
+            document.getElementById('map').src = 'https://maps.google.com/maps?q=' + pos.lat + ', ' + pos.long + '&t=&z=15&ie=UTF8&iwloc=&output=embed';
+        };
 
     </script>
 </body>
