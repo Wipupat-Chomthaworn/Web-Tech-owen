@@ -1,0 +1,63 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab4/3</title>
+    <style>
+        body {
+            font-family: 'Mitr', sans-serif;
+        }
+
+        th {
+            background-color: #d3d3d3;
+            padding: 10px;
+            font-size: 15px;
+            font-weight: 500;
+        }
+
+        input {
+            border: 2px solid red;
+            padding-top: 3px;
+            padding-bottom: 3px;
+        }
+    </style>
+</head>
+</style>
+<body>
+    <h1>ลงทะเบียนเข้าร่วมงาน</h1>
+    <input type="number" id="dataid" placeholder="รหัสนักศึกษา">
+    <input type="text" id="fname" placeholder="ชื่อ">
+    <input type="text" id="lname" placeholder="นามสกุล">
+    <button onclick="register()">ลงทะเบียน</button> <br><br>
+    <hr><br>
+
+    <table id="info">
+        <tr>
+            <th>ลำดับที่</th>
+            <th>รหัสนักศึกษา</th>
+            <th>ชื่อ</th>
+            <th>นามสกุล</th>
+        </tr>
+    </table>
+</body>
+<script>
+    var num = 1;
+    function register() {
+        let table = document.getElementById("info");
+        var row = table.insertRow(-1);
+        var noo = row.insertCell(0);
+        var id = row.insertCell(1);
+        var name = row.insertCell(2);
+        var surname = row.insertCell(3);
+
+        noo.innerHTML = num;
+        num++;
+
+        id.innerHTML = dataid.value;
+        name.innerHTML = fname.value;
+        surname.innerHTML = lname.value;
+    }
+</script>
+</html>

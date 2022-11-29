@@ -1,0 +1,55 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="styles.css">
+    <title>Document</title>
+</head>
+
+<body>
+    <div class="container">
+        <input type="text" id="numbers">
+        <p>:</p>
+        <button id="submit" onclick="Submit()">Submit</button>
+    </div>
+    <br><br>
+</body>
+
+<script type="text/javascript">
+    function Submit() {
+        let check = 0;
+        const num = document.getElementById('numbers').value;
+        var left = document.createElement('left');
+
+        var ChessTable = document.createElement('table');
+        for (var i = 0; i < num; i++) {
+            var tr = document.createElement('tr');
+            for (var j = 0; j < 8; j++) {
+                if (check == num) {
+                    break;
+                }
+                var td = document.createElement('td');
+                if ((i + j) % 2 == 0) {
+                    td.setAttribute('class', 'cell whitecell');
+                    tr.appendChild(td);
+                    check++;
+                }
+                else {
+                    td.setAttribute('class', 'cell blackcell');
+                    tr.appendChild(td);
+                    check++;
+                }
+            }
+            ChessTable.appendChild(tr);
+        }
+        left.appendChild(ChessTable);
+
+        ChessTable.setAttribute('cellspacing', '0');
+        ChessTable.setAttribute('width', '500px');
+        document.body.appendChild(left);
+    }
+</script>
+
+</html>

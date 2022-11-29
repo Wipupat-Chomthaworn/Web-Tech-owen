@@ -1,0 +1,120 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <link rel="stylesheet" href="style.css" />
+    <title>Document</title>
+    <style>
+      .grid-colu {
+        display: grid;
+        grid-template-columns: repeat(2, 1fr);
+      }
+      .gallery {
+        margin: 5px;
+        background-color: rgb(121, 108, 238);
+        border: 5px solid rgb(121, 108, 238);
+        width: 600px;
+      }
+      img {
+        width: 100%;
+        height: 500px;
+      }
+
+      .desc {
+        padding: 15px;
+        color: #fff;
+        text-align: center;
+      }
+
+      @media screen and (max-width: 600px) {
+        .grid-colu {
+          display: grid;
+          grid-template-columns: repeat(1, 1fr);
+        }
+      }
+    </style>
+  </head>
+  <body>
+    <div class="container-fluid">
+      <h1>Popular Cat names</h1>
+      <p>
+        Lorem, ipsum dolor sit amet consectetur adipisicing elit. Veniam
+        possimus consequatur repellendus sapiente atque? Nemo, beatae magnam?
+        Ducimus possimus quia eligendi magnam ad molestiae doloribus perferendis
+        nulla, facere commodi ex distinctio, similique deleniti, fugit libero!
+        Saepe est alias quidem distinctio? Dolorum fugit cum nemo perferendis?
+        Quod iste illum corporis nam maiores aperiam, laboriosam architecto ex
+        velit et tempore vero obcaecati exercitationem ut dolorum. Vel, quia
+        quibusdam quisquam corporis, eligendi, velit at consequatur illum quos
+        magni magnam. Eveniet quisquam minima veritatis, obcaecati deleniti at
+        eaque quos, quis modi error vitae veniam illo deserunt maiores porro
+        iste cumque quam sequi vel consequuntur.
+      </p>
+      <div class="grid-colu">
+        <h1>List of cats</h1>
+        <br />
+        <div class="gallery">
+          <a
+            target="_blank"
+            href="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+          >
+            <img
+              src="https://upload.wikimedia.org/wikipedia/commons/thumb/3/3a/Cat03.jpg/1200px-Cat03.jpg"
+              alt="cats2"
+              width="500px"
+              height="500px"
+            />
+          </a>
+          <div class="desc">Garfield</div>
+        </div>
+        <div class="gallery">
+          <a
+            target="_blank"
+            href="https://static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-mediumSquareAt3X-v2.jpg"
+          >
+            <img
+              src="https://static01.nyt.com/images/2021/09/14/science/07CAT-STRIPES/07CAT-STRIPES-mediumSquareAt3X-v2.jpg"
+              width="500px"
+              height="700px"
+              alt="cats2"
+              id="cat2"
+            />
+          </a>
+          <div class="desc">Jiki</div>
+        </div>
+        <div class="gallery">
+          <a
+            target="_blank"
+            href="https://www.rd.com/wp-content/uploads/2021/01/GettyImages-1175550351.jpg"
+          >
+            <img
+              src="https://www.rd.com/wp-content/uploads/2021/01/GettyImages-1175550351.jpg"
+              width="500px"
+              height="500px"
+              alt="cats3"
+              id="cat3"
+            />
+          </a>
+          <div class="desc">Blackie</div>
+        </div>
+        <div class="gallery">
+          <a
+            target="_blank"
+            href="https://www.trudellanimalhealth.com/sites/default/files/images/tmdi-cat-Tachypnea_1x.jpg"
+          >
+            <img
+              src="https://www.trudellanimalhealth.com/sites/default/files/images/tmdi-cat-Tachypnea_1x.jpg"
+              width="500px"
+              height="500px"
+              alt="cats4"
+              id="cat4"
+            />
+          </a>
+          <div class="desc">Luna</div>
+        </div>
+      </div>
+    </div>
+  </body>
+</html>

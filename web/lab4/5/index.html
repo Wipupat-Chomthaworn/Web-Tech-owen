@@ -1,0 +1,88 @@
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>lab4/5</title>
+
+
+    <link rel="stylesheet" href="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/css/bootstrap.min.css">
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.4.1/jquery.min.js"></script>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/popper.js/1.14.7/umd/popper.min.js"></script>
+    <script src="https://maxcdn.bootstrapcdn.com/bootstrap/4.3.1/js/bootstrap.min.js"></script>
+
+</head>
+
+<body>
+    <p></p>
+
+    <h1 class="text-center"> OWEN FOOD <div class="btn btn-warning font-weight-bold">Delivery</div></h1>
+    <br>
+
+    <div class="row mx-4">
+        <div class="col-7">
+            <div class="col-11 card p-0">
+                <div class="col card p-0">
+                    <div class="row">
+                        <img class="col-4 p-0"
+                            src="https://aubreyskitchen.com/wp-content/uploads/2021/01/salmon-sashimi-recipe.jpg"
+                            alt="Generic placeholder image" height="200px">
+                        <div class="col-6 p-4">
+                            <h5 class="mt-0">ซาชิมิแซลม่อน</h5>
+                            <h6 class="font-weight-light">Delivery by OWEN FOOD</h6>
+                        </div>
+                        <div class="col-2 p-2">
+                            <button type="button" onclick="addOrder('ซาชิมิแซลม่อน')" id="1" class="btn btn-warning">Add
+                                Order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col card p-0">
+                    <div class="row">
+                        <img class="col-4 p-0"
+                            src="https://questionjapan.com/wp-content/uploads/2020/10/sashimi-nhat-ban-4.jpg"
+                            alt="Generic placeholder image" height="200px">
+                        <div class="col-6 p-4">
+                            <h5 class="mt-0">ซาซิมิรวม</h5>
+                            <h6 class="font-weight-light">Delivery by OWEN FOOD</h6>
+                        </div>
+                        <div class="col-2 p-2">
+                            <button type="button" onclick="addOrder('ซาซิมิรวม')" id="2"
+                                class="btn btn-warning">Add
+                                Order</button>
+                        </div>
+                    </div>
+                </div>
+                <div class="col card p-0">
+                    <div class="row">
+                        <img class="col-4 p-0"
+                            src="https://p-u.popcdn.net/attachments/images/000/021/497/large/taiwan-milk-tea-with-bubble_1339-73160.jpg?1574675312"
+                            alt="Generic placeholder image" height="200px">
+                        <div class="col-6 p-4">
+                            <h5 class="mt-0">ชานมไข่มุก</h5>
+                            <h6 class="font-weight-light">Delivery by OWEN FOOD</h6>
+                        </div>
+                        <div class="col-2 p-2">
+                            <button type="button" onclick="addOrder('ชานมไข่มุก')" id="3" class="btn btn-warning">Add
+                                Order</button>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+        <div class="col col-4">
+            <div class="card" style="width: 25rem">
+              <ul class="list-group list-group-flush" id="order">
+                <li class="list-group-item bg-primary text-white">
+                  Order
+                </li>
+              </ul>
+            </div>
+          </div>
+    </div>
+    <script src="script.js"></script>
+
+</body>
+
+</html>

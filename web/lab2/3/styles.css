@@ -1,0 +1,38 @@
+#j {
+    width: 160px;
+    height: 30px;
+    background-color: red;
+    color: white;
+}
+
+#d {
+    width: 190px;
+    height: 30px;
+    background-color: blue;
+    color: white;
+
+}
+
+#b {
+    width: 150px;
+    height: 30px;
+    background-color: #008000;
+    color: white;
+
+}
+
+#r {
+    width: 180px;
+    height: 30px;
+    background-color: #808080;
+    color: white;
+
+}
+
+#t {
+    width: 175px;
+    height: 30px;
+    background-color: #808000;
+    color: white;
+
+}

@@ -1,0 +1,64 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta http-equiv="X-UA-Compatible" content="IE=edge" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <!-- <link rel="stylesheet" href="style.css"> -->
+    <title>Document</title>
+  </head>
+  <body>
+    <div id="div1"></div>
+  </body>
+</html>
+<script>
+  let requestURL = "countries.json";
+  let request = new XMLHttpRequest();
+  request.onreadystatechange = function () {
+    if (request.readyState == 4 && request.status == 200) {
+      ExtractData(JSON.parse(request.responseText));
+    }
+  };
+  request.open("GET", requestURL, true);
+  request.send();
+
+  function ExtractData(data) {
+    let location = "Location : ";
+    let border_c = "Borders : ";
+    for (let member of data) {
+      document.getElementById("div1").innerHTML +=
+        '<img id="picture" src=' +
+        "'" +
+        member.flag +
+        "'" +
+        'style="width:120px;transform:translate(200px, 75px);border-style:solid; "' +
+        "<br>";
+      document.getElementById("div1").innerHTML +=
+        "<br>" +
+        "Name : " +
+        "<b>" +
+        member.name +
+        "</b>" +
+        "<br>" +
+        "Capital : " +
+        member.capital +
+        "<br>" +
+        "Population : " +
+        member.population +
+        "<br>" +
+        "Region : " +
+        member.region +
+        "<br>";
+      document.getElementById("div1").innerHTML += location;
+      for (let loc of member.latlng) {
+        document.getElementById("div1").innerHTML += loc + " ";
+      }
+      document.getElementById("div1").innerHTML += "<br>";
+      document.getElementById("div1").innerHTML += border_c;
+      for (let bor of member.borders) {
+        document.getElementById("div1").innerHTML += bor + " ";
+      }
+      document.getElementById("div1").innerHTML += "<br>";
+    }
+  }
+</script>

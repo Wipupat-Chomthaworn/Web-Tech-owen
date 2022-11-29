@@ -1,0 +1,19 @@
+.container {
+    display: inline-flex;
+    gap: 10px;
+}
+
+.cell {
+    height: 60px;
+    width: 60px;
+    border: 1px solid black;
+    border-style: inset;
+}
+
+.blackcell {
+    background-color: black;
+}
+
+.whitecell {
+    background-color: white;
+}

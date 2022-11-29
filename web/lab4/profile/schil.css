@@ -1,0 +1,20 @@
+body {
+    --backg: #1C6758;
+    /* hsl(216, 41%, 27%)
+hsl(216, 41%, 27%) */
+    --org: #1F4690;
+    --yellowdec: hsl(40, 56%, 83%);
+    --black: hsl(0, 0%, 7%);
+    --purple: hsl(275, 46%, 29%);
+    --white: hsl(275, 46%, 100%);
+    --fs: 25px;
+    background: var(--backg);
+    margin: 0;
+    width: 100%;
+    height: 100%;
+    font-family: sans-serif;
+    color: var(--white);
+    font-family: "Noto Sans Thai", sans-serif;
+    overflow: hidden;
+    overflow: auto;
+}
